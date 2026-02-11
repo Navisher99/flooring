@@ -1,41 +1,41 @@
 const floors = [
   {
-    name: "Timber Flooring Installation",
+    name: "Timber Flooring",
     price: "From $85 / m²",
     image: "img/timber.jpg",
-    description: "Precision installation of solid and engineered timber flooring."
+    description: "High-end timber installation with perfect alignment and finish."
   },
   {
-    name: "Laminate Flooring Installation",
+    name: "Laminate Flooring",
     price: "From $45 / m²",
     image: "img/laminate.jpg",
-    description: "Cost-effective, clean installation with professional finish."
+    description: "Clean, efficient installation with attention to detail."
   },
   {
-    name: "Vinyl Plank Installation",
+    name: "Vinyl Plank Flooring",
     price: "From $55 / m²",
     image: "img/vinyl.jpg",
-    description: "Water-resistant vinyl plank installation, perfect for modern homes."
+    description: "Modern vinyl plank installation, durable and stylish."
   },
   {
-    name: "Tile Flooring Installation",
+    name: "Tile Flooring",
     price: "From $70 / m²",
     image: "img/tile.jpg",
-    description: "Accurate tile installation for kitchens, bathrooms & laundries."
+    description: "Precision tile installation for wet areas and living spaces."
   }
 ];
 
 const grid = document.getElementById("floorGrid");
 
-floors.forEach(floor => {
+floors.forEach((floor, index) => {
   grid.innerHTML += `
-    <div class="col-md-6 col-lg-3">
-      <div class="card h-100 shadow-sm">
-        <img src="${floor.image}" class="card-img-top" alt="${floor.name}">
+    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="${index * 120}">
+      <div class="card floor-card h-100">
+        <img src="${floor.image}" alt="${floor.name}">
         <div class="card-body">
-          <h5 class="card-title">${floor.name}</h5>
-          <p class="card-text small">${floor.description}</p>
-          <div class="price">${floor.price}</div>
+          <h5 class="fw-semibold">${floor.name}</h5>
+          <p class="small text-muted">${floor.description}</p>
+          <div class="price mt-2">${floor.price}</div>
         </div>
       </div>
     </div>
