@@ -2,25 +2,25 @@ const floors = [
   {
     name: "Timber Flooring",
     price: "From $85 / m²",
-    image: "img/timber.jpg",
+    image: "first.jpg",
     description: "High-end timber installation with perfect alignment and finish."
   },
   {
     name: "Laminate Flooring",
     price: "From $45 / m²",
-    image: "img/laminate.jpg",
+    image: "second.jpg",
     description: "Clean, efficient installation with attention to detail."
   },
   {
     name: "Vinyl Plank Flooring",
     price: "From $55 / m²",
-    image: "img/vinyl.jpg",
+    image: "third.jpg",
     description: "Modern vinyl plank installation, durable and stylish."
   },
   {
     name: "Tile Flooring",
     price: "From $70 / m²",
-    image: "img/tile.jpg",
+    image: "forth.jpg",
     description: "Precision tile installation for wet areas and living spaces."
   }
 ];
@@ -41,3 +41,4 @@ floors.forEach((floor, index) => {
     </div>
   `;
 });
+
